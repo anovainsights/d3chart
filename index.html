@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
@@ -13,15 +14,27 @@
 </head>
 
 <body>
-		<div class="container">
-			<h1>A random text</h1>	
-		</div>
-    <button>Toggle between slide up and slide down for a p element</button>
-    <p>This is a paragraph.</p>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="js/script.js"></script>
-<script src="js/jquery.js"></script>
-</body>
-</html>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="js/d3initial.js"></script>
+  <div class="container">
+    <h1>A random text</h1>
+  </div>
+  <button>Toggle between slide up and slide down for a p element</button>
+  <p>This is a paragraph.</p>
+  <div class="botonfont">
+    <button id="cambiarletra" onclick="SetToGreen">Cambiar el color de la letra</button>
+  </div>
+  <p>D3 Tutorials </p>
+  <script>
+    var data = [4, 1, 6, 2, 8, 9];
+    var body = d3.select("body")
+                .selectAll("span")
+                .data(data)
+                .enter()
+                .append("span")
+                .text(function(d) { return d + " "; });
+</script>
 
+</body>
+
+</html>
