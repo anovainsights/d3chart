@@ -1,6 +1,9 @@
-function SetToGreen (){
-return d3.select(this).style("color", "green")};
+d3.selectAll("button").on("click", function(){
+    console.log("debuti cambiando de color");
+    d3.selectAll("p").style("color","red");
 
-d3.select("body").append("p").text("Hello World!");
-d3.selectAll("div")
-    .on("click").append("p").text("Mouseover!!!");
+})
+
+d3.selectAll("p").on("click", function(){
+    console.log("has pinchado en el texto");
+   })
